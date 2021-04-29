@@ -1,0 +1,23 @@
+body {
+  background-color: lightcoral;
+}
+h1 {
+  text-size-adjust: 50%;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: burlywood;
+  color: darkolivegreen;
+  font-size: 150%;
+}  
+ul {
+  font-size: 120%;
+  margin: 20px;
+  padding: 20px;
+}
+a {
+  font-size: 140%;
+}
+
+
+
