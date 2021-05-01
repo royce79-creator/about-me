@@ -8,7 +8,9 @@ h1 {
   padding: 20px;
   background-color: burlywood;
   color: darkolivegreen;
-  font-size: 150%;
+  font-size: 250%;
+  border-radius: 40px;
+  width: auto;
 }  
 ul {
   font-size: 120%;
@@ -17,6 +19,28 @@ ul {
 }
 a {
   font-size: 140%;
+}
+h2 {
+  font-size: 150%;
+  color: green;
+  margin: 10px;
+  padding: 20px;
+  background-color: burlywood;
+  width: 6%;
+  border-radius: 30px;
+}
+p {
+  width: 50%;
+  font-size: 150%;
+}
+#h2style1 {
+  font-size: 150%;
+  color: green;
+  margin: 10px;
+  padding: 20px;
+  background-color: burlywood;
+  width: 9%;
+  border-radius: 30px;
 }
 
 
