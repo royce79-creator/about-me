@@ -42,6 +42,15 @@ p {
   width: 9%;
   border-radius: 30px;
 }
+#h2style2 {
+  font-size: 150%;
+  color: green;
+  margin: 10px;
+  padding: 20px;
+  background-color: burlywood;
+  width: 11%;
+  border-radius: 30px;
+}
 
 
 
