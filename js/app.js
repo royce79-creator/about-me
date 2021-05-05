@@ -28,7 +28,7 @@ q2();
 
 function q3(){
   let codeNow = prompt('Am I a software developer?').toLowerCase();
-  if(codeNow === 'yes' || answerOne === 'y') {
+  if(codeNow === 'yes' || codeNow === 'y') {
     console.log('You are right! Love to code!');
     alert('You are right! Love to code!');
     scoreBoard++;
@@ -37,6 +37,7 @@ function q3(){
   } else {
     alert('Be a good sport.');
   }
+}
 q3();
 
 // // //Question 4
@@ -56,7 +57,7 @@ q4();
 
 // // //Question 5
 function q5(){
-  let codeFellow = prompt('Do I study at Code Fellows?');
+  let codeFellow = prompt('Do I study at Code Fellows?').toLowerCase();
   if(codeFellow === 'yes' || codeFellow === 'y') {
     console.log('you know it!');
     alert('Yup, learning the industry secrets!');
@@ -81,21 +82,24 @@ q5();
 let guessedNumber;
 let correctAnswer1 = 17;
 let attemptsAllowed = 4;
-
-alert(`We're going to play a game now! Guess a number between 1-50, please enter a numerical whole number please on the next prompt!`);
-for(let i = 0; i < attemptsAllowed; i++) {
-  guessedNumber = prompt(`Guess a number!`);
-  if (correctAnswer1 === parseInt(guessedNumber)){
-    alert(`You Got it!`);
-    scoreBoard++;
-  }
-  else if (correctAnswer1 < guessedNumber) {
-    alert(`Guess is too high!`);
-  }
-  else if (correctAnswer1 > guessedNumber) {
-    alert(`your guess is too low!`);
+function q6(){
+  alert(`We're going to play a game now! Guess a number between 1-50, please enter a numerical whole number please on the next prompt!`);
+  for(let i = 0; i < attemptsAllowed; i++) {
+    guessedNumber = prompt(`Guess a number!`);
+    if (correctAnswer1 === parseInt(guessedNumber)){
+      alert(`You Got it!`);
+      scoreBoard++;
+    }
+    else if (correctAnswer1 < guessedNumber) {
+      alert(`Guess is too high!`);
+    }
+    else if (correctAnswer1 > guessedNumber) {
+      alert(`your guess is too low!`);
+    }
   }
 }
+q6();
+
 // Add a 7th question that has multiple possible correct answers that are stored in an array.
 // Give the user 6 attempts to guess the correct answer.
 // The guesses will end once the user guesses a correct answer or they run out of attempts.
@@ -103,26 +107,29 @@ for(let i = 0; i < attemptsAllowed; i++) {
 // Consider using a loop of some sort for this question.
 let attempts = 6;
 let monthAnswer = false;
-
-alert('you\'re good, Let\'s see if you can guess my favorite months!');
-while(!monthAnswer && attempts){
-  let favMonths = ['december', 'march', 'july'];
-  let answerFor = prompt('What are my favorite months? here\'s a hint, I have 3 favorite months!');
-  attempts--;
-  for (let i = 0; i < favMonths.length; i++) {
-    if (answerFor === favMonths[i]) {
-      alert('You are correct! How did you know??');
-      scoreBoard++;
-      monthAnswer = true;
+function q7(){
+  alert('Let\'s see if you can guess my favorite months!');
+  while(!monthAnswer && attempts){
+    let favMonths = ['december', 'march', 'july'];
+    let answerFor = prompt('What are my favorite months? here\'s a hint, I have 3 favorite months!').toLowerCase();
+    attempts--;
+    for (let i = 0; i < favMonths.length; i++) {
+      if (answerFor === favMonths[i]) {
+        alert('You are correct! How did you know??');
+        alert('You\'re good');
+        scoreBoard++;
+        monthAnswer = true;
+      }
+    }
+    if (!monthAnswer) {
+      console.log('After incorrect month entered');
+      alert('Sorry you did not answer correctly.');
     }
   }
 }
-if (!monthAnswer) {
-  console.log('After incorrect month entered');
-  alert('Sorry you did not answer correctly. But the correct answers were december, march and july');
-}
+q7();
 
+alert('But the correct answers were december, march and july');
 alert(`Your final score is ${scoreBoard}!`);
 
 //Still Struggling with getting the scoreboard to work.
-
