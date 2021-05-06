@@ -2,24 +2,53 @@
 
 // // console.log('hello people')
 // //Question 1
+
 let username = prompt('What is your name stranger?');
 let scoreBoard = 0;
+
+let arrayOfQuestions = [
+  ['Do you think I work at Apple?', 'Do you think I live in Seattle?', 'Am I a software developer?', 'Do I like anime?', 'Do I study at Code Fellows?']
+];
+let arrayOfAnswers = [
+  ['yes', 'y', 'no', 'n']
+];
+let arrayOfReturns = [
+  ['You are correct! I work at Apple!', 'I actually do work at Apple', 'You are a samsung person huh.',], 
+  ['You are correct! I live in Seattle!', 'Nope', 'Can you at least play along?'],
+  ['You are right! Love to code!', 'Nope, not right.', 'Be a good sport.'],
+  ['Yup! Love me some Naruto', 'I mean, very close.', 'ehh, guess you didn'/'t know'],
+  ['Yup, learning the industry secrets!', 'guess I learned on the fly!', 'You might as well put something in.']
+];
 
 alert('welcome ' + username + '!');
 alert('Please answer the following questions with yes or no.');
 
+function q1(){
+  let answerOne = prompt(arrayOfQuestions[0][0]).toLowerCase();
+  if(answerOne === arrayOfAnswers[0][0] || answerOne === arrayOfAnswers[0][1]) {
+    // console.log('You are correct! I work at Apple!');
+    alert(arrayOfReturns[0][0]);
+    scoreBoard++;
+  } else if (answerOne === arrayOfAnswers[0][2] || answerOne === arrayOfAnswers[0][3]) {
+    alert(arrayOfReturns[0][1]);
+  } else {
+    alert(arrayOfReturns[0][2]);
+  }
+}
+q1();
+
 // // //Question 2
 
 function q2(){
-  let answerOne = prompt('Do you think I live in Seattle?').toLowerCase();
-  if(answerOne === 'yes' || answerOne === 'y') {
-    console.log('You are correct! I live in Seattle!');
-    alert('You are correct! I live in Seattle!');
+  let answerTwo = prompt(arrayOfQuestions[0][1]).toLowerCase();
+  if(answerTwo === arrayOfAnswers[0][0] || answerTwo === arrayOfAnswers[0][1]) {
+    // console.log('You are correct! I live in Seattle!');
+    alert(arrayOfReturns[1][0]);
     scoreBoard++;
-  } else if (answerOne === 'no' || answerOne === 'n') {
-    alert('nope');
+  } else if (answerTwo === arrayOfAnswers[0][2] || answerTwo === arrayOfAnswers[0][3]) {
+    alert(arrayOfReturns[1][1]);
   } else {
-    alert('can you at least play along?');
+    alert(arrayOfReturns[1][2]);
   }
 }
 q2();
@@ -27,45 +56,47 @@ q2();
 // // //Question 3
 
 function q3(){
-  let codeNow = prompt('Am I a software developer?').toLowerCase();
-  if(codeNow === 'yes' || codeNow === 'y') {
-    console.log('You are right! Love to code!');
-    alert('You are right! Love to code!');
+  let codeNow = prompt(arrayOfQuestions[0][2]).toLowerCase();
+  if(codeNow === arrayOfAnswers[0][0] || codeNow === arrayOfAnswers[0][1]) {
+    // console.log('You are right! Love to code!');
+    alert(arrayOfReturns[2][0]);
     scoreBoard++;
-  } else if (codeNow === 'no' || codeNow === 'n') {
-    alert('Nope, not right.');
+  } else if (codeNow === arrayOfAnswers[0][2] || codeNow === arrayOfAnswers[0][3]) {
+    alert(arrayOfReturns[2][1]);
   } else {
-    alert('Be a good sport.');
+    alert(arrayOfReturns[2][2]);
   }
 }
 q3();
 
 // // //Question 4
+
 function q4(){
-  let workBro = prompt('Do I like anime?').toLowerCase();
-  if(workBro === 'yes' || workBro === 'y') {
-    console.log('You know it, my favorite would be Naruto.');
-    alert('Yup! Love me some Naruto');
+  let workBro = prompt(arrayOfQuestions[0][3]).toLowerCase();
+  if(workBro === arrayOfAnswers[0][0] || workBro === arrayOfAnswers[0][1]) {
+    // console.log('You know it, my favorite would be Naruto.');
+    alert(arrayOfReturns[3][0]);
     scoreBoard++;
-  } else if (workBro === 'no' || workBro === 'n') {
-    alert('I mean, very close.');
+  } else if (workBro === arrayOfAnswers[0][2] || workBro === arrayOfAnswers[0][3]) {
+    alert(arrayOfReturns[3][1]);
   } else {
-    alert('ehh, guess you didn'/'t know');
+    alert(arrayOfReturns[3][2]);
   }
 }
 q4();
 
 // // //Question 5
+
 function q5(){
-  let codeFellow = prompt('Do I study at Code Fellows?').toLowerCase();
-  if(codeFellow === 'yes' || codeFellow === 'y') {
-    console.log('you know it!');
-    alert('Yup, learning the industry secrets!');
+  let codeFellow = prompt(arrayOfQuestions[0][4]).toLowerCase();
+  if(codeFellow === arrayOfAnswers[0][0] || codeFellow === arrayOfAnswers[0][1]) {
+    // console.log('you know it!');
+    alert(arrayOfReturns[4][0]);
     scoreBoard++;
-  } else if (codeFellow === 'no' || codeFellow === 'n') {
-    alert('guess I learned on the fly!');
+  } else if (codeFellow === arrayOfAnswers[0][2] || codeFellow === arrayOfAnswers[0][3]) {
+    alert(arrayOfReturns[4][1]);
   } else {
-    alert('You might as well put something in.');
+    alert(arrayOfReturns[4][2]);
   }
 }
 q5();
@@ -83,18 +114,18 @@ let guessedNumber;
 let correctAnswer1 = 17;
 let attemptsAllowed = 4;
 function q6(){
-  alert(`We're going to play a game now! Guess a number between 1-50, please enter a numerical whole number please on the next prompt!`);
+  alert('We\'re going to play a game now! Guess a number between 1-50, please enter a numerical whole number please on the next prompt!');
   for(let i = 0; i < attemptsAllowed; i++) {
-    guessedNumber = prompt(`Guess a number!`);
+    guessedNumber = prompt('Guess a number!');
     if (correctAnswer1 === parseInt(guessedNumber)){
-      alert(`You Got it!`);
+      alert('You Got it!');
       scoreBoard++;
     }
     else if (correctAnswer1 < guessedNumber) {
-      alert(`Guess is too high!`);
+      alert('Guess is too high!');
     }
     else if (correctAnswer1 > guessedNumber) {
-      alert(`your guess is too low!`);
+      alert('your guess is too low!');
     }
   }
 }
