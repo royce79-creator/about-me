@@ -120,6 +120,7 @@ function q6(){
     if (correctAnswer1 === parseInt(guessedNumber)){
       alert('You Got it!');
       scoreBoard++;
+      break;
     }
     else if (correctAnswer1 < guessedNumber) {
       alert('Guess is too high!');
@@ -150,6 +151,7 @@ function q7(){
         alert('You\'re good');
         scoreBoard++;
         monthAnswer = true;
+        break;
       }
     }
     if (!monthAnswer) {
@@ -162,5 +164,4 @@ q7();
 
 alert('But the correct answers were december, march and july');
 alert(`Your final score is ${scoreBoard}!`);
-
 //Still Struggling with getting the scoreboard to work.
