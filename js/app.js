@@ -1,8 +1,4 @@
 'use strict';
-
-// // console.log('hello people')
-// //Question 1
-
 let username = prompt('What is your name stranger?');
 let scoreBoard = 0;
 
@@ -26,7 +22,6 @@ alert('Please answer the following questions with yes or no.');
 function q1(){
   let answerOne = prompt(arrayOfQuestions[0][0]).toLowerCase();
   if(answerOne === arrayOfAnswers[0][0] || answerOne === arrayOfAnswers[0][1]) {
-    // console.log('You are correct! I work at Apple!');
     alert(arrayOfReturns[0][0]);
     scoreBoard++;
   } else if (answerOne === arrayOfAnswers[0][2] || answerOne === arrayOfAnswers[0][3]) {
@@ -36,13 +31,9 @@ function q1(){
   }
 }
 q1();
-
-// // //Question 2
-
 function q2(){
   let answerTwo = prompt(arrayOfQuestions[0][1]).toLowerCase();
   if(answerTwo === arrayOfAnswers[0][0] || answerTwo === arrayOfAnswers[0][1]) {
-    // console.log('You are correct! I live in Seattle!');
     alert(arrayOfReturns[1][0]);
     scoreBoard++;
   } else if (answerTwo === arrayOfAnswers[0][2] || answerTwo === arrayOfAnswers[0][3]) {
@@ -53,12 +44,9 @@ function q2(){
 }
 q2();
 
-// // //Question 3
-
 function q3(){
   let codeNow = prompt(arrayOfQuestions[0][2]).toLowerCase();
   if(codeNow === arrayOfAnswers[0][0] || codeNow === arrayOfAnswers[0][1]) {
-    // console.log('You are right! Love to code!');
     alert(arrayOfReturns[2][0]);
     scoreBoard++;
   } else if (codeNow === arrayOfAnswers[0][2] || codeNow === arrayOfAnswers[0][3]) {
@@ -69,12 +57,9 @@ function q3(){
 }
 q3();
 
-// // //Question 4
-
 function q4(){
   let workBro = prompt(arrayOfQuestions[0][3]).toLowerCase();
   if(workBro === arrayOfAnswers[0][0] || workBro === arrayOfAnswers[0][1]) {
-    // console.log('You know it, my favorite would be Naruto.');
     alert(arrayOfReturns[3][0]);
     scoreBoard++;
   } else if (workBro === arrayOfAnswers[0][2] || workBro === arrayOfAnswers[0][3]) {
@@ -84,9 +69,6 @@ function q4(){
   }
 }
 q4();
-
-// // //Question 5
-
 function q5(){
   let codeFellow = prompt(arrayOfQuestions[0][4]).toLowerCase();
   if(codeFellow === arrayOfAnswers[0][0] || codeFellow === arrayOfAnswers[0][1]) {
@@ -101,15 +83,6 @@ function q5(){
 }
 q5();
 
-// alert('Well thanks for answering all my questions ' + username + ' hope you enjoy my page!');
-
-// //Question 6
-// //Using a loop to describe what vacation spot I would want to og to the most.
-// // Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
-// // Indicates through an alert if the guess is “too high” or “too low”.
-// // It should give the user exactly four opportunities to get the correct answer.
-// // After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.
-// // let guessedNumber = +prompt(`Guess a number between 1-50, please enter a numerical whole number please!`);
 let guessedNumber;
 let correctAnswer1 = 17;
 let attemptsAllowed = 4;
@@ -131,12 +104,6 @@ function q6(){
   }
 }
 q6();
-
-// Add a 7th question that has multiple possible correct answers that are stored in an array.
-// Give the user 6 attempts to guess the correct answer.
-// The guesses will end once the user guesses a correct answer or they run out of attempts.
-// Display all the possible correct answers to the user.
-// Consider using a loop of some sort for this question.
 let attempts = 6;
 let monthAnswer = false;
 function q7(){
@@ -164,4 +131,4 @@ q7();
 
 alert('But the correct answers were december, march and july');
 alert(`Your final score is ${scoreBoard}!`);
-//Still Struggling with getting the scoreboard to work.
+
